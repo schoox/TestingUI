@@ -14,4 +14,3 @@ Feature: UI
       | TM        |
       | Manager   |
       | Employee  |
-    # Enter steps here

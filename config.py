@@ -5,9 +5,6 @@ import inspect
 import os
 import socket
 # import getpass
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.options import Options
 
 CLASS_ID = ""
 DRIVER = "C:\PPython38/chromedriver.exe"
