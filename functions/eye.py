@@ -42,7 +42,7 @@ class TheEye(object):
         eyes.configure.set_api_key(self.__get_api_key())
 
         eyes.batch = self.batch_info
-        eyes.batch_info.id = BATCH_NAME  # type is Text
+        self.batch_info.id = BATCH_NAME  # type is Text
         if config_case == 1:
             # set the overlap between sub-images when a scrolled window is stitched in pixels
             eyes.stitch_overlap = 45  # height of menu
