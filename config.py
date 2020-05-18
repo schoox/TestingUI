@@ -7,7 +7,7 @@ import socket
 # import getpass
 
 CLASS_ID = ""
-DRIVER = "C:\PPython38/chromedriver.exe"
+DRIVER = "C:\Python38/chromedriver.exe"
 # DRIVER = "C:\Python27/chromedriver.exe"
 
 # this should be updated when we are going to add it on QA
