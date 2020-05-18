@@ -10,7 +10,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
 CLASS_ID = ""
-DRIVER = "C:\Python38/chromedriver.exe"
+DRIVER = "C:\PPython38/chromedriver.exe"
+# DRIVER = "C:\Python27/chromedriver.exe"
 
 # this should be updated when we are going to add it on QA
 QA_HOSTNAME = ""
@@ -95,3 +96,17 @@ def custom_assert(self, msg):
     """
 
     raise self.failureException(msg)
+
+
+def get_path(context):
+    """
+
+    :param self:
+    :return:
+    """
+    elena = context._stack[0]['config'].paths[0]
+    # strip k pairnw to teleutaio apo to array san onoma
+    # replace to .feature me keno => Training_curricula gia onoma
+    # replace tis katw paules me kena
+
+    return elena

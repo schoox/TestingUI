@@ -1,11 +1,13 @@
 from driver import Browser
 from functions.eye import TheEye
 from functions.pages import Page
-from config import get_root_url, set_environment
+from config import get_root_url, set_environment, get_path
+
 
 def before_all(context):
     context.driver = Browser()
     context.eye = TheEye(context.driver)
+    context.eye.open_eye(get_path(context))
     context.page = Page(context)
     context.domain = get_root_url(set_environment())
 
@@ -22,4 +24,5 @@ def before_all(context):
 
 
 def after_all(context):
+    context.eye.close_eye()
     context.driver.close()

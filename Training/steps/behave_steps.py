@@ -8,6 +8,7 @@ def logi_as(context, role):
 
 @when('I go to Training Page Tab Curricula')
 def go_to_training_tab_curricula(context):
+    # case is the test name
     context.case = context.page.training_curricula(context.acad_id)
     print(context.case)
 
