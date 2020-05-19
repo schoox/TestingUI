@@ -14,4 +14,4 @@ def go_to_training_tab_curricula(context):
 
 @then('I will check the page')
 def check_with_eye(context):
-    context.eye.scroll_strict_mode(context.role, context.case)
+    context.eye.scroll_strict_mode(context.role)

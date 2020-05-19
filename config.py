@@ -7,8 +7,8 @@ import socket
 # import getpass
 
 CLASS_ID = ""
-DRIVER = "C:\Python38/chromedriver.exe"
-# DRIVER = "C:\Python27/chromedriver.exe"
+# DRIVER = "C:\Python38/chromedriver.exe"
+DRIVER = "C:\Python27/chromedriver.exe"
 
 # this should be updated when we are going to add it on QA
 QA_HOSTNAME = ""
@@ -97,13 +97,10 @@ def custom_assert(self, msg):
 
 def get_path(context):
     """
-
-    :param self:
-    :return:
+    Get the test name from the path of the test and return it.
     """
-    elena = context._stack[0]['config'].paths[0]
-    # strip k pairnw to teleutaio apo to array san onoma
-    # replace to .feature me keno => Training_curricula gia onoma
-    # replace tis katw paules me kena
+    path = context._stack[0]['config'].paths[0]
+    # Get the test name from the path, eg. C:/.../Training_curricula => Training curricula
+    test_name = path.split('/')[-1].split('.')[0].replace("_", " ")
 
-    return elena
+    return test_name
