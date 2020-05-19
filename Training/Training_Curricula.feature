@@ -11,6 +11,6 @@ Feature: UI
     Examples:
       | Role      |
       | Admin     |
-#      | TM        |
+      | TM        |
 #      | Manager   |
 #      | Employee  |

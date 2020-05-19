@@ -87,17 +87,25 @@ def custom_assert(self, msg):
     raise self.failureException(msg)
 
 
-def get_path(context):
+def get_path(context, before="feature"):
     """
     Get the test name from the path of the test and return it.
+    before="all"
+    before="feature"
+    before="scenario"
+    before="step"
     """
-    path = context._stack[0]['config'].paths[0]
+    path = ""
+    if before == "all":
+        path = context._stack[0]['config'].paths[0]
+    elif before == "feature":
+        path = context._stack[0]["feature"].location.filename
     # Get the test name from the path, eg. C:/.../Training_curricula => Training curricula
     test_name = path.split('/')[-1].split('.')[0].replace("_", " ")
 
     return test_name
 
-def set_before(context, acad_id, case=1):
+def set_before_feature(context, acad_id, case=1):
     """
         return the context
         case:1 -> set for UI testing/applitools
@@ -111,6 +119,7 @@ def set_before(context, acad_id, case=1):
 
     if case == 1:
         context.browser = Browser()
+        context.browser.open()
         context.eye = TheEye(context.browser.driver)
         context.eye.open_eye(get_path(context))
         context.page = Page(context)
@@ -128,8 +137,8 @@ def set_after(context, case=1):
     """
 
     if case == 1:
-        context.eye.close_eye()
         context.browser.close()
+        context.eye.close_eye()
     elif case == 2:
         context.browser.close()
     else: #case 3, API doesn't need
