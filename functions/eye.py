@@ -4,7 +4,6 @@ from functions import helpers
 
 BATCH_NAME = "Test_Suite_" + helpers.get_date(9)
 
-
 class TheEye(object):
     """
     Class for handling applitools screenshot tests.
@@ -19,7 +18,7 @@ class TheEye(object):
         Set driver.
         """
 
-        self.driver = driver.driver
+        self.driver = driver
 
     def __get_api_key(self):
         """

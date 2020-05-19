@@ -3,7 +3,7 @@ from behave import given, when, then
 @given('I login as "{role}"')
 def logi_as(context, role):
     context.role = role
-    context.driver.driver.get(context.domain + "common/CSRF/getToken.php?email=panos@schoox.com")
+    context.browser.driver.get(context.domain + "common/CSRF/getToken.php?email=panos@schoox.com")
 
 
 @when('I go to Training Page Tab Curricula')
