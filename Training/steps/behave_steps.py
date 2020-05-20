@@ -18,6 +18,11 @@ def go_to_training_tab_courses(context):
     context.case = context.page.training_courses(context.acad_id)
 
 
+@when('I go to Training Page Tab Events')
+def go_to_training_tab_events(context):
+    context.case = context.page.training_events(context.acad_id)
+
+
 @then('I will check the page')
 def check_with_eye(context):
     context.eye.scroll_strict_mode(context.role)

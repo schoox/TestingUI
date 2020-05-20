@@ -49,6 +49,15 @@ class Page():
         self.__get_url("academies/courses.php?acadId=" + str(acad_id))
         return key
 
+    def training_events(self, acad_id):
+        """
+            return page key
+        """
+
+        key = "Training Events"
+        self.__get_url("academies/events.php?acadId=" + str(acad_id) + "#?dateadded=1")
+        return key
+
     def __get_url(self, url):
         """
             go to page
