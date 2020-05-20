@@ -12,5 +12,5 @@ Feature: UI
       | Role      |
       | Admin     |
       | TM        |
-      | Manager   |
-      | Employee  |
+#      | Manager   |
+#      | Employee  |

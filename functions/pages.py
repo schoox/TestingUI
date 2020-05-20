@@ -11,7 +11,7 @@ class Page():
             Page constructor
         """
         self.conf = conf
-        self.driver = conf.driver.driver
+        self.driver = conf.browser.driver
 
     def home_page(self):
         """

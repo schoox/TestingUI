@@ -3,7 +3,12 @@ from selenium.webdriver.chrome.options import Options
 from config import DRIVER
 
 class Browser(object):
-    try:
+
+    def __init__(self):
+        self.driver = None
+
+    def open(self):
+
         options = Options()
         # options.add_argument('--headless')
         options.add_argument("--start-maximized")
@@ -11,8 +16,7 @@ class Browser(object):
         driver.implicitly_wait(30)
         driver.set_page_load_timeout(30)
         print("[BUILD] Driver created successfully.")
-    except RuntimeError as e:
-        raise AssertionError("[ERROR] -- Driver can not be created.")
+        self.driver = driver
 
     def close(self):
         print("\n[FINISHED] -- TEST CASE EXECUTED.")
