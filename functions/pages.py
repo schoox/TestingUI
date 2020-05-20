@@ -40,6 +40,15 @@ class Page():
         self.__get_url("academies/tp.php?acadId=" + str(acad_id) + "#?priority=2")
         return key
 
+    def training_courses(self, acad_id):
+        """
+            return page key
+        """
+
+        key = "Training Courses"
+        self.__get_url("academies/courses.php?acadId=" + str(acad_id))
+        return key
+
     def __get_url(self, url):
         """
             go to page
