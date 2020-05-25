@@ -85,6 +85,14 @@ class Page():
         self.__get_url("academies/events.php?acadId=" + str(acad_id) + "&mine=1")
         return key
 
+    def academy_library(self, acad_id):
+        """
+            return page key
+        """
+        key = "Academy Library"
+        self.__get_url("academies/library2.php?acadId="+ str(acad_id) + "#?dateadded=1")
+        return key
+
     def __get_url(self, url):
         """
             go to page
