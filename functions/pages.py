@@ -93,6 +93,30 @@ class Page():
         self.__get_url("academies/library2.php?acadId="+ str(acad_id) + "#?dateadded=1")
         return key
 
+    def academy_groups(self, acad_id):
+        """
+            return page key
+        """
+        key = "Academy Groups"
+        self.__get_url("academies/groups.php?acadId=" + str(acad_id))
+        return key
+
+    def create_new_group(self, acad_id):
+        """
+            return page key
+        """
+        key = "Create Group"
+        self.__get_url("groups/addgroup.php?acadId=" + str(acad_id))
+        return key
+
+    def group_wall(self, group_id):
+        """
+            return page key
+        """
+        key = "Group Wall"
+        self.__get_url("groups/wall.php?group_id=" + str(group_id))
+        return key
+
     def __get_url(self, url):
         """
             go to page
