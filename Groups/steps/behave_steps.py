@@ -17,6 +17,10 @@ def go_to_create_new_group(context):
 def go_to_group_wall(context):
     context.case = context.page.group_wall(context.group_id)
 
+@when('I go to Group All Discussions Page')
+def go_to_group_wall(context):
+    context.case = context.page.group_all_discussions(context.group_id)
+
 @then('I will check the page')
 def check_with_eye(context):
     context.eye.scroll_strict_mode(context.role)

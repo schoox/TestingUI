@@ -117,6 +117,14 @@ class Page():
         self.__get_url("groups/wall.php?group_id=" + str(group_id))
         return key
 
+    def group_all_discussions(self, group_id):
+        """
+            return page key
+        """
+        key = "Group All Discussions"
+        self.__get_url("groups/discussions.php?group_id=" + str(group_id))
+        return key
+
     def __get_url(self, url):
         """
             go to page
