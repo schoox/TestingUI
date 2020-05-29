@@ -58,6 +58,15 @@ class Page():
         self.__get_url("academies/events.php?acadId=" + str(acad_id) + "#?dateadded=1")
         return key
 
+    def training_bundles(self, acad_id):
+        """
+            return page key
+        """
+
+        key = "Training Bundles"
+        self.__get_url("academies/bundles.php?acadId=" + str(acad_id))
+        return key
+
     def my_training_courses(self, acad_id):
         """
             return page key

@@ -22,6 +22,10 @@ def go_to_training_tab_courses(context):
 def go_to_training_tab_events(context):
     context.case = context.page.training_events(context.acad_id)
 
+@when('I go to Training Page Tab Bundles')
+def go_to_training_tab_bundles(context):
+    context.case = context.page.training_bundles(context.acad_id)
+
 
 @when('I go to My Training Page Tab My Courses')
 def go_to_training_tab_courses(context):
