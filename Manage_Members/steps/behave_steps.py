@@ -1,5 +1,6 @@
 from behave import given, when, then
 
+
 @given('I login as "{role}"')
 def login_as(context, role):
     context.role = role
