@@ -166,6 +166,22 @@ class Page():
         self.__get_url("academies/panel/pastcustomers.php?acadId=" + str(acad_id))
         return key
 
+    def add_users_employees(self, acad_id):
+        """
+            return page key
+        """
+        key = "Add Users Employees"
+        self.__get_url("academies/panel/import/index.php?acadId=" + str(acad_id))
+        return key
+
+    def add_users_external_members(self, acad_id):
+        """
+            return page key
+        """
+        key = "Add Users External Members"
+        self.__get_url("academies/panel/import/external.php?acadId=" + str(acad_id))
+        return key
+
     def onboarding_profiles(self, acad_id):
         """
             return page key

@@ -35,6 +35,20 @@ def go_to_manage_members_past_external_members(context):
     print(context.case)
 
 
+@when('I go to Add Users Tab Employees')
+def go_to_add_users_employees(context):
+    # case is the test name
+    context.case = context.page.add_users_employees(context.acad_id)
+    print(context.case)
+
+
+@when('I go to Add Users Tab External Members')
+def go_to_add_users_external_members(context):
+    # case is the test name
+    context.case = context.page.add_users_external_members(context.acad_id)
+    print(context.case)
+
+
 @then('I will check the page')
 def check_with_eye(context):
     context.eye.scroll_strict_mode(context.role)
