@@ -134,6 +134,38 @@ class Page():
         self.__get_url("groups/discussions.php?group_id=" + str(group_id))
         return key
 
+    def manage_members_employees(self, acad_id):
+        """
+            return page key
+        """
+        key = "Manage Members Employees"
+        self.__get_url("academies/panel/members2.php?acadId=" + str(acad_id))
+        return key
+
+    def manage_members_past_employees(self, acad_id):
+        """
+            return page key
+        """
+        key = "Manage Members Past Employees"
+        self.__get_url("academies/panel/pastmembers.php?acadId=" + str(acad_id))
+        return key
+
+    def manage_members_external_members(self, acad_id):
+        """
+            return page key
+        """
+        key = "Manage Members External Members"
+        self.__get_url("academies/panel/customers.php?acadId=" + str(acad_id))
+        return key
+
+    def manage_members_past_external_members(self, acad_id):
+        """
+            return page key
+        """
+        key = "Manage Members External Members"
+        self.__get_url("academies/panel/pastcustomers.php?acadId=" + str(acad_id))
+        return key
+
     def __get_url(self, url):
         """
             go to page
