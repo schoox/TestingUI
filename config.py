@@ -105,7 +105,7 @@ def get_path(context, before="feature"):
 
     return test_name
 
-def set_before_feature(context, acad_id, group_id=None, case=1):
+def set_before_feature(context, acad_id, group_id=None, user_id=None, case=1):
     """
         return the context
         case:1 -> set for UI testing/applitools
@@ -128,6 +128,8 @@ def set_before_feature(context, acad_id, group_id=None, case=1):
     context.acad_id = acad_id
     if group_id is not None:
         context.group_id = group_id
+    if user_id is not None:
+        context.user_id = user_id
 
     return context
 

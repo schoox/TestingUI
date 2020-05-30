@@ -198,6 +198,15 @@ class Page():
         self.__get_url("academies/panel/onboarding/template.php?acadId=" + str(acad_id))
         return key
 
+    def user_friends_list(self, acad_id, user_id):
+        """
+            return page key
+        """
+        key = "User Friends List"
+        self.__get_url("academies/friends.php?acadId=" + str(acad_id) + "&user=" + str(user_id))
+        return key
+
+
     def __get_url(self, url):
         """
             go to page
