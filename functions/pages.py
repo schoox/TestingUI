@@ -166,6 +166,22 @@ class Page():
         self.__get_url("academies/panel/pastcustomers.php?acadId=" + str(acad_id))
         return key
 
+    def onboarding_profiles(self, acad_id):
+        """
+            return page key
+        """
+        key = "Onboarding Profiles"
+        self.__get_url("academies/panel/onboarding/index.php?acadId=" + str(acad_id))
+        return key
+
+    def onboarding_templates(self, acad_id):
+        """
+            return page key
+        """
+        key = "Onboarding Templates"
+        self.__get_url("academies/panel/onboarding/template.php?acadId=" + str(acad_id))
+        return key
+
     def __get_url(self, url):
         """
             go to page
