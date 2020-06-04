@@ -1,6 +1,6 @@
 Feature: UI
 
-  @listing @groups
+  @wall @groups
   Scenario Outline: I want to check the UI in Group Wall Page
     Given I login as "<Role>"
     When I go to Group Wall Page
@@ -8,8 +8,8 @@ Feature: UI
 
 
     Examples:
-      | Role         |
-      | Admin        |
-      | Group Admin  |
-      | Group Member |
-      | Member       |
+      | Role          |
+      | Admin         |
+      | Group Admin   |
+      | Group Creator |
+      | Group Member  |
