@@ -39,7 +39,7 @@ def go_to_training_tab_courses(context):
 
 @when('I go to My Training Page Tab My Events')
 def go_to_training_tab_events(context):
-    context.case = context.page.my_training_events(context.acad_id)
+    context.page.my_training_events(context.acad_id)
 
 @then('I will check the page')
 def check_with_eye(context):

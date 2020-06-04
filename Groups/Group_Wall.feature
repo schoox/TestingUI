@@ -1,5 +1,4 @@
-Feature: UI_Group
-  # Enter feature description here
+Feature: UI
 
   @listing @groups
   Scenario Outline: I want to check the UI in Group Wall Page
