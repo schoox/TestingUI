@@ -1,4 +1,4 @@
-Feature: UI_Group
+Feature: UI
   # Enter feature description here
 
   @listing @groups
@@ -9,8 +9,8 @@ Feature: UI_Group
 
 
     Examples:
-      | Role      |
-      | Admin     |
-      | TM        |
-      | Manager   |
-      | Employee  |
+      | Role         |
+      | Admin        |
+      | Group Admin  |
+      | Group Member |
+      | Member       |

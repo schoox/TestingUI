@@ -1,4 +1,4 @@
-Feature: UI_Group
+Feature: UI
   # Enter feature description here
 
   @listing @groups @group_discussions
