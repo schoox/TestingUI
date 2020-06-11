@@ -134,6 +134,106 @@ class Page():
         self.__get_url("groups/discussions.php?group_id=" + str(group_id))
         return key
 
+    def group_content(self, group_id):
+        """
+            return page key
+        """
+        key = "Group Content"
+        self.__get_url("groups/content.php?group_id=" + str(group_id))
+        return key
+
+    def group_members(self, group_id):
+        """
+            return page key
+        """
+        key = "Group Members"
+        self.__get_url("groups/people.php?group_id=" + str(group_id))
+        return key
+
+    def group_admins(self, group_id):
+        """
+            return page key
+        """
+        key = "Group Admins"
+        self.__get_url("groups/admins.php?group_id=" + str(group_id))
+        return key
+
+    def edit_group(self, group_id):
+        """
+            return page key
+        """
+        key = "Edit Group"
+        self.__get_url("groups/addgroup.php?group_id=" + str(group_id))
+        return key
+
+    def edit_image(self, group_id):
+        """
+            return page key
+        """
+        key = "Edit Image"
+        self.__get_url("groups/image.php?group_id=" + str(group_id))
+        return key
+
+    def polls(self, group_id):
+        """
+            return page key
+        """
+        key = "Polls"
+        self.__get_url("groups/polls/polls.php?group_id=" + str(group_id))
+        return key
+
+    def create_poll(self, group_id):
+        """
+            return page key
+        """
+        key = "Create Poll"
+        self.__get_url("groups/polls/index.php?group_id=" + str(group_id))
+        return key
+
+    def manage_polls(self, group_id):
+        """
+            return page key
+        """
+        key = "Manage Polls"
+        self.__get_url("groups/polls/manage.php?group_id=" + str(group_id))
+        return key
+
+    def individual_invite(self, acad_id, group_id):
+        """
+            return page key
+        """
+        key = "Send Individual Invitation"
+        self.__get_url("groups/invites/individual_group.php?acadId=" + str(acad_id) +
+                       " &group_id=" + str(group_id))
+        return key
+
+    def advanced_invite(self, group_id, acad_id):
+        """
+            return page key
+        """
+        key = "Send Advanced Invitation"
+        self.__get_url("groups/invites/advanced_group.php?group_id=" + str(group_id) + "&acadId="
+                       + str(acad_id))
+        return key
+
+    def individual_registration(self, acad_id, group_id):
+        """
+            return page key
+        """
+        key = "Individual Registration"
+        self.__get_url("groups/add_members/individual_group.php?acadId=" + str(acad_id) +
+                       " &group_id=" + str(group_id))
+        return key
+
+    def advanced_registration(self, group_id, acad_id):
+        """
+            return page key
+        """
+        key = "Advanced Registration"
+        self.__get_url("groups/add_members/advanced_group.php?group_id=" + str(group_id) +
+                       "&acadId=" + str(acad_id))
+        return key
+
     def manage_members_employees(self, acad_id):
         """
             return page key
