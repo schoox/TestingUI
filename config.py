@@ -116,7 +116,9 @@ def set_before_feature(context, acad_id, user_id=None, case=1):
     from driver import Browser
     from functions.eye import TheEye
     from functions.pages import Page
+    from functions.actions import Element
 
+    context.acad_id = acad_id
     if case == 1:
         context.browser = Browser()
         context.browser.open()
@@ -125,7 +127,8 @@ def set_before_feature(context, acad_id, user_id=None, case=1):
         context.page = Page(context)
         context.domain = get_root_url(set_environment())
 
-    context.acad_id = acad_id
+    context.element = Element(context.browser)
+
     if user_id is not None:
         context.user_id = user_id
 

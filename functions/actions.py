@@ -23,7 +23,7 @@ class Element(object):
         """
 
         self.conf = conf
-        self.driver = conf.wd
+        self.driver = conf.driver
 
     def exists(self, target, path_type="xpath", msg="-"):
         """
